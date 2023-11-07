@@ -35,6 +35,12 @@ const FeedbackForm = () => {
 
       // Handle the response as needed
       console.log("Server response:", response.data);
+      alert(`${form.name} sent feedback succesfully...`);
+      setForm({
+        name: "",
+        email: "",
+        feedback: "",
+      });
       // You can reset the form and show a success feedback to the user here.
     } catch (error) {
       alert("Error submitting form:", error);
